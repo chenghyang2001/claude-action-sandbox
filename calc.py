@@ -7,10 +7,9 @@ def add(a, b):
 
 
 def average(numbers):
-    """回傳數字清單的平均值
-
-    已知 bug：空 list 會觸發 ZeroDivisionError。
-    """
+    """回傳數字清單的平均值；空 list 回傳 0"""
+    if not numbers:
+        return 0
     return sum(numbers) / len(numbers)
 
 
